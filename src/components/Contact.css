@@ -12,12 +12,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: var(--glass-bg) !important;
-    backdrop-filter: var(--glass-blur) !important;
-    -webkit-backdrop-filter: var(--glass-blur) !important;
-    border: 1px solid var(--glass-border) !important;
-    border-radius: 16px !important;
-    box-shadow: var(--glass-shadow) !important;
 }
 
 .contact__info h3 {
