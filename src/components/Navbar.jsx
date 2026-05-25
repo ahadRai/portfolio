@@ -10,7 +10,6 @@ const NAV_ITEMS = [
     { label: 'Experience', to: 'experience' },
     { label: 'Skills', to: 'skills' },
     { label: 'Projects', to: 'projects' },
-    { label: 'Resume', to: 'resume' },
     { label: 'Contact', to: 'contact' },
 ];
 

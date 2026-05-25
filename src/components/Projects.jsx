@@ -4,6 +4,13 @@ import './Projects.css';
 
 const projects = [
     {
+        title: 'VibeStandard - Production readiness auditor for AI-generated code',
+        subtitle: 'Production readiness auditor',
+        tech: ['Python', 'FastAPI', 'React', 'Docker', 'PostgreSQL', 'AWS'],
+        desc: 'Production readiness auditor that scans AI-generated code for 90+ issues. Features parallel analyzers with a YAML-based rule engine, context-aware scoring, and a FastAPI backend with a React frontend. Containerized with Docker and deployed on AWS EC2.',
+        live: 'http://3.26.114.125/',
+    },
+    {
         title: 'Health Bar',
         subtitle: 'Medical Record-Keeping Platform',
         tech: ['Go', 'Gorilla Mux', 'PostgreSQL', 'JWT', 'Docker'],
@@ -56,6 +63,7 @@ export default function Projects() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.12, duration: 0.5 }}
+                            onClick={() => window.open(proj.live || proj.github, '_blank', 'noopener,noreferrer')}
                         >
                             <div className="projects__card-header">
                                 <div className="projects__folder">
@@ -64,9 +72,16 @@ export default function Projects() {
                                     </svg>
                                 </div>
                                 <div className="projects__links">
-                                    <a href={proj.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                        <FaGithub />
-                                    </a>
+                                    {proj.github && (
+                                        <a href={proj.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" onClick={(e) => e.stopPropagation()}>
+                                            <FaGithub />
+                                        </a>
+                                    )}
+                                    {proj.live && (
+                                        <a href={proj.live} target="_blank" rel="noopener noreferrer" aria-label="Live Demo" onClick={(e) => e.stopPropagation()}>
+                                            <FaExternalLinkAlt />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                             <h3 className="projects__title">{proj.title}</h3>

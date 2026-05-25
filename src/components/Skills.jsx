@@ -12,7 +12,7 @@ const skillGroups = [
     },
     {
         title: 'Tools & Databases',
-        items: ['Docker', 'Git', 'RabbitMQ', 'PostgreSQL', 'MySQL', 'MSSQL', 'Redis', 'Postman'],
+        items: ['Docker', 'Git', 'RabbitMQ', 'PostgreSQL', 'MySQL', 'MSSQL', 'Redis', 'Postman', 'AWS'],
     },
     {
         title: 'Others',
