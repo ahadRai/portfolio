@@ -17,12 +17,12 @@ export default function About() {
                 </motion.h2>
 
                 <motion.div
-                    className="about__grid glass-card"
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
+                    <div className="about__grid glass-card">
                     <div className="about__text">
                         <p>
                             Hello! I'm <span className="accent">Ahad Raiyen</span>, a software
@@ -67,6 +67,7 @@ export default function About() {
                                 <p>Dhaka, Bangladesh</p>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </motion.div>
             </div>

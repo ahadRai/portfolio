@@ -34,12 +34,12 @@ export default function Experience() {
                     {experiences.map((exp, i) => (
                         <motion.div
                             key={i}
-                            className="exp__card glass-card"
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.15, duration: 0.5 }}
                         >
+                            <div className="exp__card glass-card">
                             <div className="exp__header">
                                 <div className="exp__icon-wrap">
                                     <FaBriefcase />
@@ -65,6 +65,7 @@ export default function Experience() {
                                     </motion.li>
                                 ))}
                             </ul>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

@@ -58,13 +58,12 @@ export default function Projects() {
                     {projects.map((proj, i) => (
                         <motion.div
                             key={i}
-                            className="projects__card glass-card"
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.12, duration: 0.5 }}
-                            onClick={() => window.open(proj.live || proj.github, '_blank', 'noopener,noreferrer')}
                         >
+                            <div className="projects__card glass-card" onClick={() => window.open(proj.live || proj.github, '_blank', 'noopener,noreferrer')}>
                             <div className="projects__card-header">
                                 <div className="projects__folder">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" width="36" height="36">
@@ -91,6 +90,7 @@ export default function Projects() {
                                 {proj.tech.map((t) => (
                                     <span key={t}>{t}</span>
                                 ))}
+                            </div>
                             </div>
                         </motion.div>
                     ))}

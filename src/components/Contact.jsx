@@ -18,12 +18,12 @@ export default function Contact() {
 
                 <div className="contact__grid">
                     <motion.div
-                        className="contact__info glass-card"
                         initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
+                        <div className="contact__info glass-card">
                         <h3>Get In Touch</h3>
                         <p>
                             I'm currently open to new opportunities. Whether you have a
@@ -43,6 +43,7 @@ export default function Contact() {
                             <a href="https://github.com/ahadRai" target="_blank" rel="noopener noreferrer">
                                 <FaGithub /> github.com/ahadRai
                             </a>
+                        </div>
                         </div>
                     </motion.div>
                 </div>

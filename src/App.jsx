@@ -11,8 +11,8 @@ import Contact from './components/Contact';
 function App() {
   return (
     <>
-      <MapBackground />
       <div className="app-wrapper">
+        <MapBackground />
         <Navbar />
         <Hero />
         <About />

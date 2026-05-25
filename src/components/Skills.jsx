@@ -60,12 +60,12 @@ export default function Skills() {
                     {skillGroups.map((group, gi) => (
                         <motion.div
                             key={gi}
-                            className="skills__group glass-card"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: gi * 0.1, duration: 0.5 }}
                         >
+                            <div className="skills__group glass-card">
                             <h3 className="skills__group-title">{group.title}</h3>
                             <motion.div
                                 className="skills__chips"
@@ -80,6 +80,7 @@ export default function Skills() {
                                     </motion.span>
                                 ))}
                             </motion.div>
+                            </div>
                         </motion.div>
                     ))}
                 </div>
